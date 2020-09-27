@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import api from '../../services/api';
+import { Link } from 'react-router-dom';
 
 import camera from '../../assets/camera.svg'
 
@@ -52,10 +53,10 @@ export default function New({ history }) {
                 onChange={event => setCompany(event.target.value)}
             />
 
-            <label htmlFor="techs">TECNOLOGIAS * <span>separadas por virgula</span></label>
+            <label htmlFor="techs">TIPO DE HABITAT * <span>coworking, lab Maker, incubadora...</span></label>
             <input type="text"
                 id="techs"
-                placeholder="Quais tecnologias usam?"
+                placeholder="Qual habitat está cadastrando?"
                 onChange={event => setTechs(event.target.value)}
             />
 
@@ -66,6 +67,7 @@ export default function New({ history }) {
                 onChange={event => setPrice(event.target.value)}
             />
             <button type="submit" className="btn">Cadastrar</button>
+            <Link to='/dashboard'><h4 className='aa'>Meus spots</h4></Link>
         </form>
     )
 }

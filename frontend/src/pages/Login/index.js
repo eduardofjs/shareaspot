@@ -20,7 +20,7 @@ export default function Login({ history }) {
     return (
       <>
         <p>
-          Ofereça <strong>spots</strong> para programadores e encontre <strong>talentos</strong> para a sua empresa.
+          Ofereça <strong>spots</strong> em ambientes de inovação e fortaleça a interação no <strong>ecossistema</strong> local.
         </p>
 
         <form onSubmit={handleSubmit}>
@@ -28,9 +28,13 @@ export default function Login({ history }) {
           <input
             id="email"
             type="email"
-            placeholder="Seu melhor e-mail"
+            placeholder="Seu e-mail"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
+          />
+          <label htmlFor="email">Senha</label>
+          <input type="password"
+          placeholder="Sua senha"
           />
 
           <button className="btn" type="submit">
